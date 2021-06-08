@@ -17,7 +17,7 @@ app = Flask(__name__)  # intitialize the flaks app  # common
 
 @app.route('/')
 def Home():
-    return render_template('home.html')
+    return render_template('Home.html')
 
 @app.route('/stock_pred/',methods = ['POST'])
 def stock_pred():
