@@ -6,7 +6,6 @@ import pandas as pd
 from pandas import Series, DataFrame
 import matplotlib.pyplot as plt
 import seaborn as sns
-from __future__ import division
 from datetime import datetime
 from nsepy import get_history
 import pyfolio as pf
