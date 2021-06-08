@@ -1,0 +1,204 @@
+.u-section-1 {
+  background-image: url("images/7dbf3a2d-bc99-bf79-a595-d9d7ad62133e.jpg");
+  background-position: 50% 50%;
+  min-height: 691px;
+}
+
+.u-section-1 .u-shape-1 {
+  width: 359px;
+  height: 359px;
+  margin: 23px auto 0 calc(((100% - 1140px) / 2) + -105px);
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  width: calc(((100% - 1140px) / 2) + 1140px);
+  margin: -382px 0 0 auto;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  min-height: 691px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 30px 40px;
+}
+
+.u-section-1 .u-line-1 {
+  width: 111px;
+  height: 6px;
+  transform-origin: left center;
+  margin: 92px auto 0 0;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 700;
+  line-height: 1;
+  font-size: 4.5rem;
+  margin: 20px 0 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.8;
+  margin: 23px 0 0;
+}
+
+.u-section-1 .u-btn-1 {
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  border-style: solid;
+  text-transform: uppercase;
+  margin: 20px auto 0 0;
+  padding: 10px 52px 10px 50px;
+}
+
+.u-section-1 .u-image-1 {
+  min-height: 691px;
+  background-image: url("images/ADVICE-ON-PENSIONS-PENSION-ADVICE-SAVANTS-1.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 30px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 {
+    min-height: 609px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    margin-top: 43px;
+    margin-left: calc(((100% - 940px) / 2) + -105px);
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: calc(((100% - 940px) / 2) + 940px);
+    margin-top: -402px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 614px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .u-section-1 .u-line-1 {
+    margin-top: 20px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 536px;
+    background-position: 92.74% 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 {
+    min-height: 532px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    width: 293px;
+    height: 293px;
+    margin-top: 13px;
+    margin-left: calc(((100% - 720px) / 2) + -92px);
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: calc(((100% - 720px) / 2) + 720px);
+    margin-top: -305px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding: 60px 20px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 462px;
+    background-position: 87% 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 {
+    min-height: 1114px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    width: 291px;
+    height: 291px;
+    margin-top: 35px;
+    margin-left: calc(((100% - 540px) / 2) + -100px);
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: calc(((100% - 540px) / 2) + 540px);
+    margin-top: -325px;
+    margin-bottom: 2px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-right: 75px;
+    padding-left: 10px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 5.625rem;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 578px;
+    background-position: 74.09% 50%;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 {
+    min-height: 755px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    width: 228px;
+    height: 228px;
+    margin-left: calc(((100% - 340px) / 2) + -92px);
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: calc(((100% - 340px) / 2) + 340px);
+    margin-top: -240px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-right: 65px;
+    padding-bottom: 30px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 3.75rem;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 364px;
+  }
+}
