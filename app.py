@@ -24,7 +24,7 @@ def stock_pred():
     user_input = request.form['fn']
 
     try:
-        return  render_template('result.html',predictions=result_list)
+        return  render_template('Result.html',predictions=result_list)
     
 
     except:
