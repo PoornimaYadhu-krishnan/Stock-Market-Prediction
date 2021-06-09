@@ -24,7 +24,7 @@ def Search():
     return render_template('Search.html')
 
 @app.route('/About.html')
-def Search():
+def About():
     return render_template('About.html')
 
 
