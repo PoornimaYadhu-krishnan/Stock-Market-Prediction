@@ -16,6 +16,10 @@ warnings.filterwarnings("ignore")
 app = Flask(__name__)  # intitialize the flaks app  # common 
 
 @app.route('/')
+def Landing():
+    return render_template('Home.html')
+
+@app.route('/home.html')
 def Home():
     return render_template('Home.html')
 
