@@ -19,6 +19,14 @@ app = Flask(__name__)  # intitialize the flaks app  # common
 def Home():
     return render_template('Home.html')
 
+@app.route('/Search.html')
+def Search():
+    return render_template('Search.html')
+
+@app.route('/About.html')
+def Search():
+    return render_template('About.html')
+
 
 @app.route('/stock_pred/',methods = ['POST'])
 def stock_pred():
