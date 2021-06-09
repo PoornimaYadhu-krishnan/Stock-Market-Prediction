@@ -19,7 +19,7 @@ app = Flask(__name__)  # intitialize the flaks app  # common
 def Landing():
     return render_template('Home.html')
 
-@app.route('/home.html')
+@app.route('/Home.html')
 def Home():
     return render_template('Home.html')
 
@@ -37,7 +37,7 @@ def stock_pred():
     user_input = request.form['fn']
 
     try:
-        return  render_template('Result.html',predictions=result_list)
+        return  render_template('Result.html')
     
 
     except:
