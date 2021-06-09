@@ -19,6 +19,7 @@ app = Flask(__name__)  # intitialize the flaks app  # common
 def Home():
     return render_template('Home.html')
 
+
 @app.route('/stock_pred/',methods = ['POST'])
 def stock_pred():
     user_input = request.form['fn']
