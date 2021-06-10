@@ -79,11 +79,12 @@
           </div>
         </div>
         <div class="u-list u-list-1">
+          {% for each in predictions %}
           <div class="u-repeater u-repeater-1">
             <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-1">
               <div class="u-container-layout u-similar-container u-container-layout-2">
                 <h4 class="u-text u-text-black u-text-2">expected value of investement</h4>
-                <h2 class="u-text u-text-3"><b>₹10466</b>
+                <h2 class="u-text u-text-3"><b>{{each}}</b>
                 </h2>
               </div>
             </div>
@@ -92,25 +93,26 @@
                 <h4 class="u-text u-text-black u-text-4">expected return %<br>
                   <br>
                 </h4>
-                <h2 class="u-text u-text-5"><b>4.6</b>
+                <h2 class="u-text u-text-5"><b>{{each}}/b>
                 </h2>
               </div>
             </div>
             <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-4">
                 <h4 class="u-text u-text-black u-text-6">Maximum predicted loss</h4>
-                <h2 class="u-text u-text-7"><b>₹112</b>
+                <h2 class="u-text u-text-7"><b>{{each}}</b>
                 </h2>
               </div>
             </div>
             <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-4">
               <div class="u-container-layout u-similar-container u-container-layout-5">
                 <h4 class="u-text u-text-black u-text-8">Maximum predicted loss %</h4>
-                <h2 class="u-text u-text-9"><b>1.1</b>
+                <h2 class="u-text u-text-9"><b>{{each}}</b>
                 </h2>
               </div>
             </div>
           </div>
+          {% endfor %}
         </div>
         <h4 class="u-text u-text-black u-text-10"><b>Previous 1 year performance</b>
         </h4>
