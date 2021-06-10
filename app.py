@@ -82,7 +82,7 @@ def stock_pred():
         mu = rets.mean()['Close']
         sigma = rets.std()['Close']
         start_price = closingprice_df.iloc[-1, closingprice_df.columns.get_loc("Close")]
-        runs = 100000
+        runs = 100
         simulations = np.zeros(runs)
         for run in range(runs):    
             simulations[run] = stock_monte_carlo(start_price,days,mu,sigma)[days-1]
