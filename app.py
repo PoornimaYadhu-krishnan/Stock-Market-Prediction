@@ -34,7 +34,7 @@ def About():
 def plotgraph():
     end = datetime.now()
     start = datetime(end.year-1,end.month,end.day)
-    stock_df = get_history(symbol="HDFC",start=start,end=end)
+    stock_df = get_history(symbol="SBIN",start=start,end=end)
     fig = plt.figure(figsize=(10,5))
     plt.xlabel('Year-Month') 
     plt.ylabel('Stock-Price(in Rupees.)') 
@@ -70,33 +70,36 @@ def stock_monte_carlo(start_price,days,mu,sigma):
 def stock_pred():
     # user_input = request.form['fn']
     try:
+        plotgraph()
         end = datetime.now()
-        start = datetime(end.year-2,end.month,end.day)
-        l = list()
-        stock_df = get_history(symbol="HDFC",start=start,end=end)
+        start = datetime(end.year-1,end.month,end.day)
+        b = []
+        stock_df = get_history(symbol="SBIN",start=start,end=end)
         closingprice_df = stock_df['Close']
         closingprice_df=closingprice_df.to_frame()
         tech_returns = closingprice_df.pct_change()
         rets = tech_returns.dropna()
-        days = 180
+        days = 365
         mu = rets.mean()['Close']
         sigma = rets.std()['Close']
         start_price = closingprice_df.iloc[-1, closingprice_df.columns.get_loc("Close")]
-        runs = 100
+        runs = 10000
         simulations = np.zeros(runs)
         for run in range(runs):    
             simulations[run] = stock_monte_carlo(start_price,days,mu,sigma)[days-1]
         max_low = np.percentile(simulations,1)
         num_stocks=10000/start_price
-        current_value=simulations.mean()*num_stocks
-        profit_percent=((current_value-10000)/10000)*100
-        max_loss=(start_price-max_low)*num_stocks
-        loss_percent=(max_loss/10000)*100
-        l.append(current_value)
-        l.append(profit_percent)
-        l.append(max_loss)
-        l.append(loss_percent)
-        return  render_template('Result.html',predictions=l)
+        current_value=round(simulations.mean()*num_stocks,2)
+        profit_percent=round(((current_value-10000)/10000)*100)
+        max_loss=round((start_price-max_low)*num_stocks,2)
+        loss_percent=round((max_loss/10000)*100,2)
+        b.append(current_value)
+        b.append(profit_percent)
+        b.append(max_loss)
+        b.append(loss_percent)
+        print(b)
+        return  render_template('Result.html',predictions={"current_value": current_value, "profit_percent":profit_percent,"max_loss":max_loss,"loss_percent":loss_percent})
+    
     
 
     except:

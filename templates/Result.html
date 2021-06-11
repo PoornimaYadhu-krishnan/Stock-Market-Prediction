@@ -7,10 +7,10 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Result</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Result.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename='Result.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery-1.9.1.min.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
     <meta name="generator" content="Nicepage 3.16.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i">
@@ -22,6 +22,7 @@
 		"name": "",
 		"url": "index.html"
 }</script>
+</style>
     <meta property="og:title" content="Result">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#478ac9">
@@ -65,7 +66,7 @@
             <h2 class="u-align-center u-text u-text-1">
               <span style="font-size: 1.125rem;" class="u-text-body-color">Stock name&nbsp;</span>
               <br>
-              <span style="font-size: 1.5rem;">HDFC bank</span>
+              <span style="font-size: 1.5rem;">State bank of India</span>
               <br>
               <span class="u-text-body-color">
                 <span style="font-size: 1.125rem;">Investment</span>
@@ -79,12 +80,11 @@
           </div>
         </div>
         <div class="u-list u-list-1">
-          {% for each in predictions %}
           <div class="u-repeater u-repeater-1">
             <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-1">
               <div class="u-container-layout u-similar-container u-container-layout-2">
                 <h4 class="u-text u-text-black u-text-2">expected value of investement</h4>
-                <h2 class="u-text u-text-3"><b>{{each}}</b>
+                <h2 class="u-text u-text-3"><b>{{predictions.current_value}}</b>
                 </h2>
               </div>
             </div>
@@ -93,49 +93,39 @@
                 <h4 class="u-text u-text-black u-text-4">expected return %<br>
                   <br>
                 </h4>
-                <h2 class="u-text u-text-5"><b>{{each}}/b>
+                <h2 class="u-text u-text-5"><b>{{predictions.profit_percent}}</b>
                 </h2>
               </div>
             </div>
             <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-4">
                 <h4 class="u-text u-text-black u-text-6">Maximum predicted loss</h4>
-                <h2 class="u-text u-text-7"><b>{{each}}</b>
+                <h2 class="u-text u-text-7"><b>{{predictions.max_loss}}</b>
                 </h2>
               </div>
             </div>
             <div class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-4">
               <div class="u-container-layout u-similar-container u-container-layout-5">
                 <h4 class="u-text u-text-black u-text-8">Maximum predicted loss %</h4>
-                <h2 class="u-text u-text-9"><b>{{each}}</b>
+                <h2 class="u-text u-text-9"><b>{{predictions.loss_percent}}</b>
                 </h2>
               </div>
             </div>
           </div>
-          {% endfor %}
         </div>
         <h4 class="u-text u-text-black u-text-10"><b>Previous 1 year performance</b>
         </h4>
-        <img class="u-image u-image-default u-image-1" src="images/stock-graph.png" alt="" data-image-width="601" data-image-height="260">
+        <img class="u-image u-image-default u-image-1" src="{{ url_for('static', filename='stock-plot.jpg') }}" alt="" data-image-width="610" data-image-height="300">
       </div>
     </section>
-    <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
-}</style>
+   
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4b13"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">© 2021 Poornima YK</p>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="https://nicepage.com/" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
+     
     </section>
   </body>
 </html>
